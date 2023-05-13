@@ -1,0 +1,37 @@
+#!/bin/bash
+PS3="#> "
+echo ".....select number...
+"
+select choice in CREATE_DATABASE CONNECT_DATABASE LIST_DATABASE DROP_DATABASE EXIT
+do 
+	case $choice in 
+		CREATE_DATABASE )
+			. ./CREATE_DATABASE.sh
+			
+			;;	
+		CONNECT_DATABASE )
+			echo " start connectiong to your Database..."
+			. ./CONNECT_DATABASE.sh
+			;;
+
+		LIST_DATABASE )
+			echo " 
+			..........Current Database list..........
+		"
+			cd ../DatabaseEnigieDirs
+			ls -F | grep / | tr / " "
+			cd - > /dev/null
+			;;
+		
+		DROP_DATABASE )
+			. ./DROP_DATABASE.sh 
+			;;
+		EXIT )
+			exit
+			;;
+		* )
+			echo "                                    ...... Eh dah ysta ! ...... "
+	esac
+
+
+done
