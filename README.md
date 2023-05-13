@@ -1,7 +1,7 @@
 # DB-Engine 
 
 ### this bash script code simulats how data base works 
-### note : when you clone this repo, you should clone it in the home dir to avoid erorrs becouse i used some abslute paths
+### note : when you clone this repo, you should clone it in the home dir to avoid erorrs becouse i used some absolute paths
 
 ### 1- run the script:
     ./Scripts/MAIN_SCRIPT
